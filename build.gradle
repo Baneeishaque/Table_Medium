@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0-alpha6'
+		classpath 'com.novoda:gradle-android-command-plugin:1.7.1'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.novoda.android-command'
+
+android {
+    compileSdkVersion 26
+	buildToolsVersion "26.0.0"
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+}
